@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import SearchBar from './components/SearchBar';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {  };
+  onSearchSubmit(term) {
+    console.log(term);
   }
+
   render() {
     return (
-      <div className="ui segment" style={{marginTop: 20}}>
-        <SearchBar />
+      <div style={{marginTop: 20}}>
+        <SearchBar onSubmit={this.onSearchSubmit}/>
       </div>
     );
   }
